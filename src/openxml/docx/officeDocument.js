@@ -304,7 +304,7 @@ export default class extends Base{
 			return {type:"abstractNum",id:wXml.attribs["w:abstractNumId"]}
 		},
 		num(wXml){
-			return {type:"num",id:wXml.attribs["w:numId"],abstractNum:wXml.children.find(a=>a.name=="w:abstractNumId").attribs["w:val"]}
+			return {type:"num",id:wXml.attribs["w:numId"],abstractNum:wXml.children?.find(a=>a.name=="w:abstractNumId")?.attribs["w:val"]}
 		},
 		latentStyles(){
 			return null
